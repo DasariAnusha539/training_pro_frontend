@@ -1,0 +1,25 @@
+body{
+  max-height: 100%;
+}
+.input{
+  width: 220px;
+  padding: 16px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  text-align: center;
+}
+button {
+    background-color: #3912e7;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 220px;
+  }
+  .img{
+    border-radius: 50px!important;
+    text-align: center;
+    
+  }  
