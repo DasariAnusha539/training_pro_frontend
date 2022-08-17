@@ -16,7 +16,7 @@ export class OptionsComponent implements OnInit {
 
   }
 
-  receiver(){
+  receiver(){ 
     this.router.navigateByUrl('receiver');
 
   }

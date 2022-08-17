@@ -7,17 +7,73 @@
     <title>Document</title>
 </head>
 <body>
+    <!--{{l}}-->
     <div>
 <div class="sender1" style="text-align: center;">
 <div class="a" style="text-align: center;"><label for="date"><b>Date:</b></label><input type="date" placeholder="Enter current_date" id="date" name="date" required></div><br>
-<div class="a" style="text-align: center;"><label for="sname"><b>Enter Sender Name:</b></label><input type="text" placeholder="Enter Sender Name" id="sname" name="sname" required></div><br>
-<div class="a" style="text-align: center;"><label for="sacc"><b>Enter Sender Account number</b></label><input type="text" placeholder="Enter sender account_number" id="sacc" name="sacc" required></div><br>
-<div class="a" style="text-align: center;"><label for="rname"><b>enter receiver's Name</b></label><input type="text" placeholder="receiver's Name" id="rname" name="rname" required></div><br>
-<div class="a" style="text-align: center;"><label for="racc"><b>enter receiver Account number</b></label><input type="text" placeholder="Receiver Account_number" id="racc" name="racc" required></div><br>
+
+
+
+<div class="a" style="text-align: center;"><label for="sacc"><b>Enter Sender Account number</b></label>
+    <select  id="sacc" name="sacc">
+        <option *ngFor="let user of users" [value]="user" box="user.customerId">
+            {{user.customerId}}
+        </option>
+        <!--<div id="sacc1">{{user.customerId}}</div>-->
+</select>
+</div><br> 
+
+
+<div class="a" style="text-align: center;"><label for="sname"><b>Enter Sender Name:</b></label>
+    <select name="sname" id="sname" >
+        <option *ngFor="let user of users" [value]="user">
+            {{user.accountHolderName}}
+        </option>
+</select>
+</div><br>
+
+<div class="a" style="text-align: center;"><label for="s_BIC"><b>Enter BIC code:</b></label>
+<select>
+<option>ABBLINBBXXX</option><option>ACBLINBBXXX</option><option>ABNAINBBAHM</option>
+<option>ADCBINBBXXX</option>
+<option>ALLAINBBXXX</option>
+</select>
+</div><br>
+
+
+<div class="a" style="text-align: center;"><label for="racc"><b>enter receiver Account number</b></label>
+    <select name="racc" id="racc">
+        <option *ngFor="let user of users" [value]="user">
+            {{user.customerId}}
+        </option>
+</select>
+</div><br>
+
+
+
+
+<div class="a" style="text-align: center;"><label for="rname"><b>enter receiver's Name</b></label>
+    <select name="sacc" id="sacc" >
+        <option *ngFor="let user of users" [value]="user">
+            {{user.accountHolderName}}
+        </option>
+</select>
+</div><br>
+<div class="a" style="text-align: center;"><label for="r_BIC"><b>Enter BIC code:</b></label>
+    <select>
+        <option>ABBLINBBXXX</option><option>ACBLINBBXXX</option><option>ABNAINBBAHM</option>
+        <option>ADCBINBBXXX</option>
+        <option>ALLAINBBXXX</option>
+        </select>
+</div><br>
 <div class="a" style="text-align: center;"><label for="Amount"><b>enter Amount</b></label><input type="text" placeholder="sending amount" id="samount" name="samount" required></div><br>
 <div class="a" style="text-align: center;"><button (click)=send() style="background-color: rgb(119, 87, 236); color: aliceblue;">Send Amount</button></div> 
 <div class="a" style="text-align: center;"><button (click)=Download1() style="background-color: black; color: aliceblue;">Download</button></div> 
-
+<!--<ul>
+    <li *ngFor="let user of users">
+        {{user.customerId}} 
+    </li> 
+</ul>-->
 </div> 
 </div> 
 

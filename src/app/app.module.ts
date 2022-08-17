@@ -8,9 +8,9 @@ import { CashierComponent } from './cashier/cashier.component';
 import { AdminComponent } from './admin/admin.component';
 import { NetworkerComponent } from './networker/networker.component';
 import { OptionsComponent } from './options/options.component';
-import { BasicComponent } from './basic/basic.component';
 import { SenderComponent } from './sender/sender.component';
-import { ReceiverComponent } from './receiver/receiver.component';
+import {HttpClientModule} from '@angular/common/http';
+import { ReceiverComponent } from './receiver/receiver.component'; 
 
 @NgModule({
   declarations: [
@@ -20,13 +20,13 @@ import { ReceiverComponent } from './receiver/receiver.component';
     AdminComponent,
     NetworkerComponent,
     OptionsComponent,
-    BasicComponent,
     SenderComponent,
-    ReceiverComponent
+    ReceiverComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
